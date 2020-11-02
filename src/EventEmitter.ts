@@ -22,13 +22,13 @@ export abstract class EventEmitter<Events extends EventDict> implements IEventEm
   private static emitter: NEE = new NEE()
   private emitter: NEE = new NEE()
 
-  public on(key: keyof Events, cb: EventCb<Events[typeof key]>): this {
+  public on<T extends keyof Events>(key: T, cb: EventCb<Events[T]>): this {
     this.emitter.on(key as EKey, cb)
 
     return this
   }
 
-  public emit(key: keyof Events, event: Event<any>): this {
+  public emit<T extends keyof Events>(key: T, event: Events[T]): this {
     this.emitter.emit(key as EKey, event)
     this.static.emitter.emit(key as EKey, this, event)
 
