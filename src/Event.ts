@@ -1,6 +1,6 @@
 export class Event<T extends {}> {
 
-  private _cancelled: boolean = false
+  protected _cancelled: boolean = false
 
   constructor(public data: T) {}
 
