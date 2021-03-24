@@ -2,6 +2,7 @@
   "name": "@strdstnet/utils.events",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "version": "1.0.4",
   "scripts": {
     "build": "rm -rf lib && tsc"
   },
