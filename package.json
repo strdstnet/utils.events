@@ -3,7 +3,7 @@
   "main_": "lib/index.js",
   "types_": "lib/index.d.ts",
   "main": "src/index.ts",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "scripts": {
     "build": "rm -rf lib && tsc"
   },
